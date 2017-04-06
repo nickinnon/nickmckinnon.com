@@ -1,0 +1,7 @@
+{
+  "name": "nickmckinnon",
+  "short_name": "nickmckinnon",
+  "description": "Nick McKinnon Personal website",
+  "start_url": "/",
+  "display": "standalone"
+}

@@ -1,0 +1,34 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="nick-home.html" />
+
+<dom-module id="nick-app">
+  <template>
+    <style include='style-reset'></style>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+
+    <!-- homepage -->
+    <nick-home></nick-home>
+
+  </template>
+
+  <script>
+    class MyApplication extends Polymer.Element {
+      static get is() { return 'nick-app'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'nick-app'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(MyApplication.is, MyApplication);
+  </script>
+</dom-module>

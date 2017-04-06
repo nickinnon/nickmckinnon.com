@@ -1,0 +1,39 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="nick-home">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+      .header{
+          height:200px;
+          background-color: rgba(50,50,200,1);
+      }
+
+    </style>
+
+    <section class='header'>
+        <h2>Hey.</h2>
+        <h2>I'm Nick.</h2>
+    </section>
+
+
+  </template>
+
+  <script>
+    class NickHome extends Polymer.Element {
+      static get is() { return 'nick-home'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: ''
+          }
+        };
+      }
+    }
+
+    window.customElements.define(NickHome.is, NickHome);
+  </script>
+</dom-module>
