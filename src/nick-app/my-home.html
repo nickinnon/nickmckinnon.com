@@ -1,6 +1,6 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 
-<dom-module id="nick-home">
+<dom-module id="my-home">
   <template>
     <style>
       :host {
@@ -22,8 +22,8 @@
   </template>
 
   <script>
-    class NickHome extends Polymer.Element {
-      static get is() { return 'nick-home'; }
+    class MyHome extends Polymer.Element {
+      static get is() { return 'my-home'; }
       static get properties() {
         return {
           prop1: {
@@ -34,6 +34,6 @@
       }
     }
 
-    window.customElements.define(NickHome.is, NickHome);
+    window.customElements.define(MyHome.is, MyHome);
   </script>
 </dom-module>

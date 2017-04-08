@@ -1,8 +1,8 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 
-<link rel="import" href="nick-home.html" />
+<link rel="import" href="my-home/my-home.html" />
 
-<dom-module id="nick-app">
+<dom-module id="my-app">
   <template>
     <style include='style-reset'></style>
     <style>
@@ -12,18 +12,18 @@
     </style>
 
     <!-- homepage -->
-    <nick-home></nick-home>
+    <my-home></my-home>
 
   </template>
 
   <script>
     class MyApplication extends Polymer.Element {
-      static get is() { return 'nick-app'; }
+      static get is() { return 'my-app'; }
       static get properties() {
         return {
           prop1: {
             type: String,
-            value: 'nick-app'
+            value: 'my-app'
           }
         };
       }
