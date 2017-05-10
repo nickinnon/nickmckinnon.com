@@ -9,13 +9,19 @@
       :host {
       }
       .main-header{
-        display:table;
         height:100vh;
         width:100%;
-        background: url(../../static/images/Unique-Polygon-Background.jpg) top center;
+        overflow: hidden;
+      }
+      .main-header.content{
+        z-index: -1;
+        display:table;
+        position: fixed;
+        background:center center;
         background-size: cover;
         background-repeat: no-repeat;
-        overflow: hidden;
+        background: url(../../static/images/Unique-Polygon-Background.jpg) top center;
+        background-repeat: no-repeat;
         color: #fff;
       }
       .vertical{
@@ -23,39 +29,37 @@
         vertical-align: middle;
         text-align: center;
       }
+      .fade-window{
+        min-height:100vh;
+        background: linear-gradient(transparent , white);
+        /*
+          the idea here is to have the background gradually fade
+          out as the main view comes scrolls into the window.
+        */
+      }
       .main-body{
-          display: block;
-          height:500px;
-          min-height:100vh;
-          max-width: 800px;
-          margin:auto;
-      }
-      .blurb{
-          margin-top: 1rem;
-          padding: .5rem .5rem 0 .5rem;
-      }
-      .blurb em{
-          font-weight: 700;
-          color: var(--app-secondary-color);
+        background-color: white; /*temp*/
+        display: block;
+        padding-top: 5rem;
+        min-height: 500px;
+        max-width: 800px;
+        margin:auto;
       }
     </style>
 
-    <header class="main-header">
-        <div class="vertical">
-            <h1>Hey</h1>
-            <h1>I'm Nick</h1>
-            <h2>I'm a developer</h2>
-        </div>
+    <header class="main-header content">
+      <div class="vertical">
+        <h1>Hey</h1>
+        <h1>I'm Nick</h1>
+        <h2>I'm a developer</h2>
+      </div>
     </header>
-    <main class="main-body">
-        <section class="blurb">
-            <h2 class="title">Who am I?</h2>
-            <p>
-                I am a front-end developer fluent in <em>HTML5</em>, <em>CSS3</em>, and <em>Ecmascript 6</em>. I'm currently using <em>Polymer</em> daily, and have been experementing with <em>React</em>.
-            </p>
-        </section>
 
+    <div class="main-header spacer"></div>
+    <main class="fade-window">
+      <section class="main-body">
         <my-sheet></my-sheet>
+      </section>
     </main>
 
   </template>

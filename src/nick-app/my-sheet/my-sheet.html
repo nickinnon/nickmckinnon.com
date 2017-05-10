@@ -3,6 +3,8 @@
 
 <link rel="import" href="../my-styles.html" />
 
+<link rel="import" href="sheet-tile.html">
+
 <dom-module id="my-sheet">
   <template>
     <style include='my-styles'></style>
@@ -14,12 +16,12 @@
         color: #fff;
       }
       .title{
-          color: var(--app-secondary-color);
-          line-height: 100%;
+        color: var(--app-secondary-color);
+        line-height: 100%;
       }
       em{
-         font-weight: 700;
-         color: var(--app-secondary-color);
+        font-weight: 700;
+        color: var(--app-secondary-color);
       }
       .hero-text{
         text-transform: uppercase;
@@ -51,45 +53,29 @@
 
     <section class="title-card">
         <h4 class="title hero-text">Role</h4>
-        <h2 class="name hero-text">front-end Developer</h2>
+        <h2 class="name hero-text">front-end developer</h2>
         <p>
-            I am a front-end developer fluent in <em>HTML5</em>, <em>CSS3</em>, and <em>Ecmascript 6</em>. I'm currently using <em>Polymer</em> daily, and have been experementing with <em>React</em>.
+            I am a front-end developer fluent in <em>HTML5</em>, <em>CSS3</em>, and <em>ECMAScript 6</em>. I'm currently using <em>Polymer</em> daily, and have been experementing with <em>React</em>.
         </p>
     </section>
     <h4 class="title hero-text">Languages</h4>
-    <section class="detail-card">
-        <div class="icon">
-            <img src="../../../src/static/images/logos/html5.svg">
-        </div>
-        <div class="description">
-            <h5>Title</h5>
-            <p>
-                lorem ipsum food dolla dolla bill grills are in my will bao food truck boba milk tea and snoop dogg
-            </p>
-        </div>
-    </section>
-    <section class="detail-card">
-        <div class="icon">
-            <img src="../../../src/static/images/logos/css3.png">
-        </div>
-        <div class="description">
-            <h5>Title</h5>
-            <p>
-                lorem ipsum food dolla dolla bill grills are in my will bao food truck boba milk tea and snoop dogg
-            </p>
-        </div>
-    </section>
-    <section class="detail-card">
-        <div class="icon">
-            <img src="../../../src/static/images/logos/es6.svg">
-        </div>
-        <div class="description">
-            <h5>Title</h5>
-            <p>
-                lorem ipsum food dolla dolla bill grills are in my will bao food truck boba milk tea and snoop dogg
-            </p>
-        </div>
-    </section>
+
+    <sheet-tile
+      title="HTML"
+      img="../../../src/static/images/logos/html5.svg"
+      body="lorem ipsum food dolla dolla bill grills are in my will bao food truck boba milk tea and snoop dogg">
+    </sheet-tile>
+    <sheet-tile
+      title="CSS 3"
+      img="../../../src/static/images/logos/css3.png"
+      body="lorem ipsum food dolla dolla bill grills are in my will bao food truck boba milk tea and snoop dogg">
+    </sheet-tile>
+    <sheet-tile
+      title="ECMAScript 6"
+      img="../../../src/static/images/logos/es6.svg"
+      body="lorem ipsum food dolla dolla bill grills are in my will bao food truck boba milk tea and snoop dogg">
+    </sheet-tile>
+
   </template>
 
   <script>

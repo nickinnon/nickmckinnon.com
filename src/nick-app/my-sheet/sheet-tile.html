@@ -1,0 +1,72 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../bower_components/iron-flex-layout/iron-flex-layout.html">
+
+<link rel="import" href="../my-styles.html" />
+
+<dom-module id="sheet-tile">
+  <template>
+    <style include='my-styles'></style>
+    <style>
+      :host {
+        color: #fff;
+      }
+      .detail-card{
+        min-height: 100px;
+        background-color: var(--app-primary-color-trans40);
+        @apply(--layout-horizontal);
+        margin-bottom: 2px;
+      }
+      .icon{
+        @apply(--layout-horizontal);
+        @apply(--layout-center-justified);
+        background-color: var(--app-primary-color-trans40);
+        height: 100%;
+        min-width: 15%;
+        padding: 1.5rem;
+      }
+      .icon img{
+        height: 100px;
+        width: auto;
+      }
+      .description{
+        padding: 1rem;
+      }
+
+    </style>
+    <!-- tile -->
+    <section class="detail-card">
+        <div class="icon">
+            <img src$=[[img]]>
+        </div>
+        <div class="description">
+            <h5>[[title]]</h5>
+            <p>
+              [[body]]
+            </p>
+        </div>
+    </section>
+
+  </template>
+
+  <script>
+    class SheetTile extends Polymer.Element {
+      static get is() { return 'sheet-tile'; }
+      static get properties() {
+        return {
+          title: {
+            type: String,
+            value: 'title'
+          },
+          img: {
+            type: String
+          },
+          body: {
+            type: String
+          }
+        };
+      }
+    }
+
+    window.customElements.define(SheetTile.is, SheetTile);
+  </script>
+</dom-module>
