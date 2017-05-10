@@ -1,4 +1,20 @@
 {
+  "entrypoint": "index.html",
+  "fragments": [
+    "src/nick-app/my-home/my-home.html",
+    "src/nick-app/my-sheet/my-sheet.html",
+    "src/nick-app/my-app.html",
+    "src/nick-app/my-styles.html"
+  ],
+  "sources": [
+    "src/nick-app/**/*",
+    "src/static/images/**/*",
+    "bower.json"
+  ],
+  "extraDependencies": [
+    "manifest.json",
+    "bower_components/webcomponentsjs/webcomponents-lite.js"
+  ],
   "lint": {
     "rules": [
       "polymer-2"

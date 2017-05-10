@@ -1,0 +1,110 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../bower_components/iron-flex-layout/iron-flex-layout.html">
+
+<link rel="import" href="../my-styles.html" />
+
+<dom-module id="my-sheet">
+  <template>
+    <style include='my-styles'></style>
+    <style>
+      :host {
+        display: block;
+        background-color: var(--app-primary-color-trans60);
+        padding: 1rem;
+        color: #fff;
+      }
+      .title{
+          color: var(--app-secondary-color);
+          line-height: 100%;
+      }
+      em{
+         font-weight: 700;
+         color: var(--app-secondary-color);
+      }
+      .hero-text{
+        text-transform: uppercase;
+        font-style: italic;
+      }
+      .detail-card{
+        min-height: 100px;
+        background-color: var(--app-primary-color-trans40);
+        @apply(--layout-horizontal);
+        margin-bottom: 2px;
+      }
+      .icon{
+        @apply(--layout-horizontal);
+        @apply(--layout-center-justified);
+        background-color: var(--app-primary-color-trans40);
+        height: 100%;
+        min-width: 15%;
+        padding: 1.5rem;
+      }
+      .icon img{
+        max-height: 100px;
+        width: auto;
+      }
+      .description{
+        padding: 1rem;
+      }
+
+    </style>
+
+    <section class="title-card">
+        <h4 class="title hero-text">Role</h4>
+        <h2 class="name hero-text">front-end Developer</h2>
+        <p>
+            I am a front-end developer fluent in <em>HTML5</em>, <em>CSS3</em>, and <em>Ecmascript 6</em>. I'm currently using <em>Polymer</em> daily, and have been experementing with <em>React</em>.
+        </p>
+    </section>
+    <h4 class="title hero-text">Languages</h4>
+    <section class="detail-card">
+        <div class="icon">
+            <img src="../../../src/static/images/logos/html5.svg">
+        </div>
+        <div class="description">
+            <h5>Title</h5>
+            <p>
+                lorem ipsum food dolla dolla bill grills are in my will bao food truck boba milk tea and snoop dogg
+            </p>
+        </div>
+    </section>
+    <section class="detail-card">
+        <div class="icon">
+            <img src="../../../src/static/images/logos/css3.png">
+        </div>
+        <div class="description">
+            <h5>Title</h5>
+            <p>
+                lorem ipsum food dolla dolla bill grills are in my will bao food truck boba milk tea and snoop dogg
+            </p>
+        </div>
+    </section>
+    <section class="detail-card">
+        <div class="icon">
+            <img src="../../../src/static/images/logos/es6.svg">
+        </div>
+        <div class="description">
+            <h5>Title</h5>
+            <p>
+                lorem ipsum food dolla dolla bill grills are in my will bao food truck boba milk tea and snoop dogg
+            </p>
+        </div>
+    </section>
+  </template>
+
+  <script>
+    class MySheet extends Polymer.Element {
+      static get is() { return 'my-sheet'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'my-sheet'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(MySheet.is, MySheet);
+  </script>
+</dom-module>

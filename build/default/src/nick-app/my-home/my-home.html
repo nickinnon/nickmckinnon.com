@@ -1,8 +1,8 @@
-<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<html><head><link rel="import" href="../../../bower_components/polymer/polymer.html">
 <link rel="import" href="../my-styles.html">
-<link rel="import" href="../my-sheet/my-sheet.html" />
+<link rel="import" href="../my-sheet/my-sheet.html">
 
-<dom-module id="my-home">
+</head><body><dom-module id="my-home">
   <template>
     <style include="my-styles"></style>
     <style>
@@ -29,6 +29,7 @@
           min-height:100vh;
           max-width: 800px;
           margin:auto;
+
       }
       .blurb{
           margin-top: 1rem;
@@ -51,11 +52,20 @@
         <section class="blurb">
             <h2 class="title">Who am I?</h2>
             <p>
-                I am a front-end developer fluent in <em>HTML5</em>, <em>CSS3</em>, and <em>Ecmascript 6</em>. I'm currently using <em>Polymer</em> daily, and have been experementing with <em>React</em>.
+                I am a front-end developer fluent in <em>HTML5</em>, <em>CSS3</em>, and <em>Ecmascript 6</em>. I'm currently using <em>Polymer</em> daily, and am currently experementing with <em>React</em>.
+            </p>
+        </section>
+        <section class="blurb">
+            <h3>What do I do?</h3>
+            <p>
+
             </p>
         </section>
 
         <my-sheet></my-sheet>
+
+
+
     </main>
 
   </template>
@@ -76,3 +86,4 @@
     window.customElements.define(MyHome.is, MyHome);
   </script>
 </dom-module>
+</body></html>
