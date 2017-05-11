@@ -25,7 +25,7 @@
     {
       "name": "unbundled",
       "bundle": false,
-      "js": { "compile": true, "minify": true },
+      "js": { "compile": false, "minify": true },
       "css": { "minify": true },
       "html": { "minify": true },
       "addServiceWorker": true,
@@ -34,10 +34,10 @@
     {
       "name": "bundled",
       "bundle": true,
-      "js": { "compile": true, "minify": true },
+      "js": { "compile": false, "minify": true },
       "css": { "minify": true },
       "html": { "minify": true },
-      "addServiceWorker": true,
+      "addServiceWorker": false,
       "insertPrefetchLinks": false
     }
   ]
