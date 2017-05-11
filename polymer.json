@@ -1,9 +1,10 @@
 {
   "entrypoint": "index.html",
+  "shell": "src/nick-app/my-app.html",
   "fragments": [
     "src/nick-app/my-home/my-home.html",
     "src/nick-app/my-sheet/my-sheet.html",
-    "src/nick-app/my-app.html",
+    "src/nick-app/my-sheet/sheet-tile.html",
     "src/nick-app/my-styles.html"
   ],
   "sources": [
@@ -19,5 +20,25 @@
     "rules": [
       "polymer-2"
     ]
-  }
+  },
+  "builds": [
+    {
+      "name": "unbundled",
+      "bundle": false,
+      "js": { "compile": true, "minify": true },
+      "css": { "minify": true },
+      "html": { "minify": true },
+      "addServiceWorker": true,
+      "insertPrefetchLinks": false
+    },
+    {
+      "name": "bundled",
+      "bundle": true,
+      "js": { "compile": true, "minify": true },
+      "css": { "minify": true },
+      "html": { "minify": true },
+      "addServiceWorker": true,
+      "insertPrefetchLinks": false
+    }
+  ]
 }
