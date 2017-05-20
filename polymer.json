@@ -1,15 +1,15 @@
 {
   "entrypoint": "index.html",
-  "shell": "src/nick-app/my-app.html",
+  "shell": "src/my-app.html",
   "fragments": [
-    "src/nick-app/my-home/my-home.html",
-    "src/nick-app/my-sheet/my-sheet.html",
-    "src/nick-app/my-sheet/sheet-tile.html",
-    "src/nick-app/my-styles.html"
+    "src/my-home.html",
+    "src/my-sheet.html",
+    "src/sheet-tile.html",
+    "src/my-styles.html"
   ],
   "sources": [
-    "src/nick-app/**/*",
-    "src/static/images/**/*",
+    "src/*",
+    "images/**/*",
     "bower.json"
   ],
   "extraDependencies": [
